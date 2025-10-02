@@ -169,18 +169,20 @@ export class YoutubeChannelScraper implements INodeType {
 
         await about.close();
 
-        returnData.push({
-          json: {
-            name: ch.name,
-            url: ch.url,
-            avatar: ch.avatar,
-            subscribers: ch.subscribers,
-            description: details.description,
-            country: details.country,
-            emails: details.emails,
-            keyword: ch.keyword,
-          },
-        });
+        if (details.emails.length && !details.emails.includes('No email found')) {
+          returnData.push({
+            json: {
+              name: ch.name,
+              url: ch.url,
+              avatar: ch.avatar,
+              subscribers: ch.subscribers,
+              description: details.description,
+              country: details.country,
+              emails: details.emails,
+              keyword: ch.keyword,
+            },
+          });
+        }
       }
     }
 

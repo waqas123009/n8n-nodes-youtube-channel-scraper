@@ -1,48 +1,52 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+## 📌 Description
+This PR adds the **YouTube Channel Scraper** community node.
 
-# n8n-nodes-starter
+The node allows users to:
+- Fetch YouTube channel metadata (title, description, URL, subscriber count, etc.)
+- Optionally extract emails from channel descriptions
+- Configure region and language options
+- Toggle headless mode for debugging
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+It is built with **Playwright** for reliable scraping and follows n8n’s linting and naming conventions.
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+---
 
-If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
+## 🔍 Testing
+- [x] Linting passes with `npm run lint`
+- [x] Node builds successfully with `npm run build`
+- [x] Tested locally in n8n editor
+- [x] Verified output structure matches expected JSON format
 
-## Prerequisites
+---
 
-You need the following installed on your development machine:
+## Example output:
+```json
+{
+  "channelName": "Example Channel",
+  "channelUrl": "https://www.youtube.com/@example",
+  "description": "This is a demo channel",
+  "subscribers": "120K",
+  "emails": ["contact@example.com"]
+}
+```
 
-* [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+---
 
-## Using this starter
+✅ Checklist
+- [x] Package name follows n8n-nodes-* convention
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
++ [x] README.md includes installation and usage instructions
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm run lint` to check for errors or `npm run lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
++ [x] Boolean parameter descriptions start with “Whether …”
 
-## More information
++ [x] License file included (MIT)
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
++ [x] Published to npm: n8n-nodes-youtube-channel-scraper
 
-## License
+---
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+## 📎 Links
+
+✔️ **npm:** [n8n-nodes-youtube-channel-scraper](https://www.npmjs.com/package/n8n-nodes-youtube-channel-scraper)
+
+✔️ **GitHub repo:** [n8n-nodes-youtube-channel-scraper](https://github.com/waqas123009/n8n-nodes-youtube-channel-scraper)
